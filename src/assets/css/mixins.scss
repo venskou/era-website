@@ -1,0 +1,20 @@
+$white: #fff;
+$black: #090f25;
+
+$base__font-family: 'Lato', sans-serif;
+$base__font-size: 14 !default;
+
+$xxl-min-width: 1600px;
+$xxl-max-width: 1599px;
+$xl-min-width: 1200px;
+$xl-max-width: 1199px;
+$md-min-width: 992px;
+$md-max-width: 991px;
+$sm-min-width: 768px;
+$sm-max-width: 767px;
+$xs-min-width: 544px;
+$xs-max-width: 543px;
+
+@function rem($px, $base: $base__font-size) {
+    @return #{$px/$base}rem;
+}

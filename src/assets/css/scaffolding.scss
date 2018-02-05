@@ -1,0 +1,48 @@
+html {
+    font-size: 14px;
+
+    @media (max-width: $xl-max-width) {
+        font-size: 13px;
+    }
+
+    @media (max-width: $sm-max-width) {
+        font-size: 12px;
+    }
+}
+
+body {
+    font-family: $base__font-family;
+    color: $black;
+    background: $white;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+
+    &:hover, &:active, &:focus {
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+input {
+    outline: none !important;
+    color: $black;
+}
+
+button, input {
+    box-shadow: none !important;
+}
+
+input[type=text], input[type=password], input[type=email], textarea {
+    appearance: none !important;
+}
+
+.container-fluid {
+    max-width: 1464px;
+}

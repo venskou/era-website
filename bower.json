@@ -1,0 +1,14 @@
+{
+  "name": "era",
+  "version": "0.0.1",
+  "authors": [
+    "Mediatec Software http://www.mediatec.org <hello@mediatec.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "3.2.1"
+  }
+}

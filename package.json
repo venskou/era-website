@@ -1,0 +1,29 @@
+{
+  "name": "Era",
+  "version": "0.0.1",
+  "author": "Mediatec Software http://www.mediatec.org <hello@mediatec.com>",
+  "description": "Era - The digital crypto asset",
+  "private": true,
+  "devDependencies": {
+    "bootstrap": "latest",
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-data": "latest",
+    "gulp-ignore": "latest",
+    "gulp-print": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace-task": "latest",
+    "gulp-rigger": "latest",
+    "gulp-rimraf": "latest",
+    "gulp-sass": "latest",
+    "gulp-template": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest",
+    "gulp-wrap": "latest",
+    "merge-stream": "latest",
+    "mjml": "latest",
+    "rimraf": "latest"
+  }
+}

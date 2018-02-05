@@ -1,0 +1,13 @@
+logs/*
+!.gitkeep
+node_modules/
+.DS_Store
+.idea/
+src/assets/vendors/by_bower/
+src/vendors/by_bower
+/src/vendors/by_bower
+vcs.xml
+/dist
+dist/
+.git/
+.git

@@ -1,0 +1,91 @@
+.pageHeader {
+    height: 933px;
+    position: relative;
+    overflow: hidden;
+
+    &__introWrap {
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        padding-top: rem(380);
+        padding-bottom: 78px;
+        height: 100%;
+        position: relative;
+        z-index: 20;
+        background-color: rgba(#181822, 0.8);
+        background-image: linear-gradient(140deg, rgba(#00e5cb, 0.23) 0%, rgba(#0005fd, 0.23) 100%);
+
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: $white;
+        justify-content: center;
+        padding-left: rem(50);
+    }
+
+    &__mainText {
+        font-size: rem(50);
+        line-height: rem(51);
+        font-weight: 700;
+        text-align: right;
+        margin-right: 95px;
+    }
+
+    &__subText {
+        color: rgba($white, 0.75);
+        font-size: rem(29);
+        line-height: rem(46);
+        font-weight: 400;
+        align-self: center;
+    }
+
+    &__ocean {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 30;
+    }
+
+    &__oceanWave {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 150px;
+
+        &--white {
+            z-index: 20;
+        }
+    }
+
+    &__videoWrap {
+        position: absolute;
+        width: calc(100% + 800px);
+        height: calc(100% + 800px);
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+    }
+
+    &__video {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+#gradient-wave {
+    fill: url(#grad) !important;
+}

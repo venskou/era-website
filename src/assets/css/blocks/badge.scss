@@ -1,0 +1,16 @@
+.badge {
+    display: inline-block;
+    vertical-align: baseline;
+    text-transform: uppercase;
+    color: #1a0a2e;
+    font-size: rem(11);
+    line-height: 1;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 4px;
+    font-weight: 700;
+    background-color: rgba($white, 0.2);
+    border-radius: 3px;
+}

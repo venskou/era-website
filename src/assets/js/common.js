@@ -162,4 +162,37 @@ $(document).ready(function () {
     Strut.ready(function () {
         new globalNavDropdowns('.globalNav')
     })
+
+    $("#white-wave").wavify({
+        height: 75,
+        bones: 1,
+        amplitude: 45,
+        color: "white",
+        speed: .20
+    });
+
+    $("#gradient-wave").wavify({
+        height: 70,
+        bones: 1,
+        amplitude: 40,
+        speed: .25
+    });
+
+    var myVideo = document.getElementById("video");
+    myVideo.oncanplay = function() {
+        myVideo.pause();
+        $('.pageLoader').addClass('loaded');
+        setTimeout(function() {
+            $('.pageLoader').addClass('hidden');
+            myVideo.play();
+        }, 200);
+    };
+    myVideo.onended = function() {
+        $('.pageHeader__introWrap').addClass('show');
+    };
+
+    var waveGradientAnimation = new TimelineMax({repeat:-1,yoyo:true})
+
+    waveGradientAnimation.to("#grad stop:nth-child(1)", 1, {attr: {offset: 0}, stopColor:'#121F52'})
+    .to("#grad stop:nth-child(2)",1,{attr:{offset:1},stopColor:'#13454A'}, 0)
 });

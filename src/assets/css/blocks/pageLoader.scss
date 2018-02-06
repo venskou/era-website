@@ -1,0 +1,84 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.pageLoader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: #181822;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+
+    &.loaded {
+        opacity: 0;
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+
+    &__wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &__spin {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #00f4c8 10%, $blue 70%);
+        position: relative;
+        z-index: 10;
+        animation: spin 1.4s infinite linear;
+        transform: translateZ(0);
+
+        &::before {
+            width: 50%;
+            height: 50%;
+            background: #00f4c8;
+            border-radius: 100% 0 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+        }
+
+        &::after {
+            background: #181822 ;
+            width: 75%;
+            height: 75%;
+            border-radius: 50%;
+            content: '';
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+}

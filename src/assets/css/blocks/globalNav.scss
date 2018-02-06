@@ -5,9 +5,6 @@
     right: 0;
     z-index: 100;
     transition: none;
-    // @media (max-width: $md-max-width) {
-        // margin-top: 30px;
-    // }
 
     &__root {
         margin: 0;
@@ -30,24 +27,25 @@
     }
 
     &__logoImg {
-        position: relative;
-        top: -11px;
-        padding-bottom: rem(12);
-        width: 230px;
-
+        width: 113px;
+        height: 30px;
+        margin-bottom: rem(9);
         span {
             display: inline-block;
             vertical-align: top;
-            width: 184px;
-            height: 60px;
+            width: 113px;
+            height: 30px;
             background-repeat: no-repeat;
-            background-size: 184px 60px;
-            // background-image: url(../../assets/img/logo.png);
+            background-size: 113px 30px;
+            background-image: url(../../assets/img/logo.png);
         }
+    }
 
-        @media(max-width: $md-max-width) {
-            top: -7px;
-        }
+    &__logoPromo {
+        color: $white;
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: 1;
     }
 
     &--noDropdownTransition {
@@ -93,9 +91,9 @@
 
     &__item {
         display: inline-block;
-        vertical-align: top;
-        padding-left: rem(21);
-        padding-right: rem(22);
+        vertical-align: middle;
+        padding-left: rem(19);
+        padding-right: rem(19);
         cursor: pointer;
 
         &:first-child {
@@ -106,7 +104,7 @@
             padding-right: 0;
         }
 
-        &--has-dropdown {
+        &--hasDropdown {
             .menu__link {
                 cursor: pointer;
             }
@@ -125,13 +123,13 @@
 
     &__link {
         display: block;
-        font-size: rem(14);
-        line-height: rem(14);
+        font-size: rem(15);
+        line-height: rem(15);
         font-family: $base__font-family;
-        text-transform: uppercase;
-        color: $black;
-        font-weight: 500;
-        padding: rem(16) 0;
+        color: $white;
+        font-weight: 700;
+        padding-top: rem(20);
+        padding-bottom: rem(20);
         position: relative;
         transition: all ease-in-out 0.2s;
         cursor: pointer;
@@ -159,23 +157,6 @@
         &:focus {
             color: $white;
         }
-    }
-
-    &__linkBadge {
-        display: inline-block;
-        text-transform: uppercase;
-        color: #1a0a2e;
-        font-size: rem(11);
-        line-height: rem(11);
-        padding-top: 1px;
-        padding-bottom: 1px;
-        padding-left: 4px;
-        padding-right: 4px;
-        vertical-align: top;
-        margin-left: 4px;
-        font-weight: 700;
-        background-color: #fff;
-        border-radius: 2px;
     }
 }
 

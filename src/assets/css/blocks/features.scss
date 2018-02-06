@@ -1,0 +1,26 @@
+.features {
+    &__title {
+        text-align: center;
+        margin-bottom: rem(50);
+
+        h2 {
+            font-size: rem(32);
+            line-height: rem(46);
+            font-weight: 700;
+            color: $black-text;
+        }
+    }
+
+    &__promoText {
+        text-align: center;
+        padding-left: rem(220);
+        padding-right: rem(220);
+        margin-bottom: rem(75);
+
+        p {
+            color: $black-text;
+            font-size: rem(18);
+            line-height: rem(24);
+        }
+    }
+}

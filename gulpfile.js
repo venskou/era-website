@@ -33,10 +33,10 @@ var path = {
     src: {
         sites: 'src/sites/**/*.*',
         templates: 'src/templates/**/*.*',
-
         img: 'src/assets/img/**/*.*',
         css: 'src/assets/css/main.scss',
         js: 'src/assets/js/**/*.*',
+        fonts: 'src/assets/fonts/**/*.{ttf,woff,woff2,eot,svg}',
         vendors_by_bower: 'src/assets/vendors/by_bower/**/*.*',
         vendors_by_hands: 'src/assets/vendors/by_hands/**/*.*'
     },
@@ -45,8 +45,8 @@ var path = {
         img: 'dist/assets/img/',
         css: 'dist/assets/css/',
         js: 'dist/assets/js/',
-        vendors: 'dist/assets/vendors/'
-
+        vendors: 'dist/assets/vendors/',
+        fonts: 'dist//assets/fonts/'
     },
     watch: {
         css: 'src/assets/css/**/*.*'
@@ -141,10 +141,20 @@ gulp.task('build:img', function () {
 });
 
 /////////////////////////////////////////////////////////////////////////////
+// FONTS BUILD
+
+gulp.task('build:fonts', function() {
+    return gulp.src(path.src.fonts)
+    .pipe(gulp.dest(path.build.fonts))
+    .pipe(reload({stream: true}));
+});
+
+/////////////////////////////////////////////////////////////////////////////
 // GLOBAL BUILD
 
 gulp.task('build', [
     'build:structure', // run build:html task
+    'build:fonts', // run build:fonts task
     'build:css', // run build:css task
     'build:js', // run build:js task
     'build:img', // run build:img task
@@ -167,6 +177,9 @@ gulp.task('watch', function(){
     watch([path.src.img], function() { // watch img folder
         gulp.start('build:img'); // run build:img task
     });
+    watch([path.src.fonts], function() { // watch fonts folder
+        gulp.start('build:fonts'); // run build:fonts task
+    });
     watch([path.src.vendors_by_bower, path.src.vendors_by_hands], function() { // watch folder with vendors components
         gulp.start('build:vendors'); // run build:vendors task
     });
@@ -183,4 +196,4 @@ gulp.task('clean', function () {
 /////////////////////////////////////////////////////////////////////////////
 // DEFAULT TASK
 
-gulp.task('default', ['clean', 'build', 'watch', 'serve']);
+gulp.task('default', ['build', 'watch', 'serve']);

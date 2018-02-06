@@ -44,5 +44,13 @@ input[type=text], input[type=password], input[type=email], textarea {
 }
 
 .container-fluid {
-    max-width: 1464px;
+    max-width: $container-fluid-max-width;
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+    position: relative;
+}
+
+
+html {
+    background-color: rgba($black, 0.8);
 }

@@ -1,0 +1,97 @@
+.specification {
+    &__text {
+        margin-bottom: rem(48);
+    }
+
+    &__data {
+        margin-bottom: rem(52);
+    }
+
+    &__dataItem {
+        font-size: rem(24);
+        line-height: rem(30);
+        margin-bottom: rem(10);
+
+        sup {
+            text-transform: uppercase;
+            font-size: rem(14);
+            line-height: 1;
+        }
+    }
+
+    &__descrItem {
+        margin-bottom: rem(30);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__descrTitle {
+        margin-bottom: rem(21);
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__descrTable {
+        margin-bottom: 0;
+        tr {
+            td {
+                &:first-child {
+                    font-style: italic;
+                    width: 36%;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    &__downloads {
+        padding-left: rem(40);
+    }
+
+    &__downloadText {
+        margin-bottom: rem(27);
+    }
+
+    &__downloadSubtitle {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: rem(10);
+    }
+
+    &__downloadItemDescr {
+        margin-bottom: rem(30);
+    }
+
+    &__downloadTitle {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: rem(14);
+    }
+
+    &__download {
+        vertical-align: middle;
+    }
+
+    &__downloadBtn {
+        margin-right: rem(20);
+    }
+
+    &__downloadTitle {
+        color: $text;
+        font-size: rem(16);
+        line-height: rem(24);
+    }
+
+    &__downloadInf {
+        position: relative;
+        bottom: -1px;
+        font-size: rem(16);
+        line-height: 1;
+    }
+
+    &__downloadBtn {
+        vertical-align: middle;
+    }
+}

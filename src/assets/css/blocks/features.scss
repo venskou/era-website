@@ -1,4 +1,7 @@
 .features {
+    padding-left: rem(63);
+    padding-right: rem(63);
+
     &__title {
         text-align: center;
         margin-bottom: rem(50);
@@ -19,6 +22,62 @@
 
         p {
             color: $black-text;
+            font-size: rem(18);
+            line-height: rem(24);
+        }
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__itemGraph {
+        position: relative;
+    }
+
+    &__itemImg {
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: rem(275);
+
+        &--1 {
+            background-size: rem(275) rem(295);
+            background-image: url(../img/feature-1.jpg);
+        }
+
+        &--2 {
+            background-size: rem(292) rem(294);
+            background-image: url(../img/feature-2.jpg);
+        }
+
+        &--3 {
+            background-size: rem(248) rem(293);
+            background-image: url(../img/feature-3.jpg);
+        }
+    }
+
+    &__itemBadge {
+        position: absolute;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: rem(145);
+    }
+
+    &__itemBadgeText {
+        display: inline-block;
+        color: $white;
+        font-size: rem(21);
+        line-height: rem(30);
+        background-color: $green-dark;
+        border-radius: 4px;
+        padding-left: rem(14);
+        padding-right: rem(14);
+    }
+
+    &__itemDescr {
+        p {
+            color: $text;
             font-size: rem(18);
             line-height: rem(24);
         }

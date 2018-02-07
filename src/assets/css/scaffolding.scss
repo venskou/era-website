@@ -50,6 +50,56 @@ input[type=text], input[type=password], input[type=email], textarea {
     position: relative;
 }
 
-.bold {
+.font-bold {
     font-weight: 700;
+}
+
+.font-black {
+    font-weight: 900;
+}
+
+p {
+    font-family: $base__font-family;
+    font-weight: 400;
+    color: $text;
+    font-size: rem(16);
+    line-height: rem(24);
+    margin-bottom: rem(20);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ordered-list {
+    margin: 0;
+    padding-left: 18px;
+
+    li {
+        color: $black-text;
+        font-size: rem(16);
+        line-height: rem(24);
+    }
+}
+
+.table {
+
+  td {
+    font-size: rem(16);
+    line-height: rem(31);
+  }
+
+  &--unborderedTop {
+    tr, th {
+      &:first-child {
+        td {
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.text-muted {
+    color: rgba($black-text, 0.3);
 }

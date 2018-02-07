@@ -30,19 +30,24 @@
     }
 
     &__mainText {
-        font-size: rem(50);
-        line-height: rem(51);
-        font-weight: 700;
         text-align: right;
         margin-right: 95px;
+        p {
+            color: $white;
+            font-size: rem(50);
+            line-height: rem(51);
+            font-weight: 700;
+        }
     }
 
     &__subText {
-        color: rgba($white, 0.75);
-        font-size: rem(29);
-        line-height: rem(46);
-        font-weight: 400;
         align-self: center;
+        p {
+            color: rgba($white, 0.75);
+            font-size: rem(29);
+            line-height: rem(46);
+            font-weight: 400;
+        }
     }
 
     &__ocean {

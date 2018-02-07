@@ -39,4 +39,29 @@
     &:focus {
         box-shadow: none;
     }
+
+    &--middleAlign {
+        vertical-align: middle;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 10;
+        color: $white;
+        font-weight: 700;
+    }
+
+    &--muted {
+        &::after {
+            background-image: none;
+            background-color: $muted;
+        }
+
+        &:hover {
+            &::after {
+                background-image: none;
+                background-color: $muted;
+            }
+        }
+    }
 }

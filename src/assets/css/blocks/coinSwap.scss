@@ -1,0 +1,32 @@
+.coinSwap {
+
+    &__text {
+        margin-bottom: rem(44);
+    }
+
+    &__stepItem {
+        margin-bottom: rem(30);
+    }
+
+    &__stepsTitle {
+        display: inline-block;
+        margin-bottom: rem(18);
+    }
+
+    &__phoneUi {
+        height: 100%;
+        position: relative;
+    }
+
+    &__phoneImg {
+        width: rem(900);
+        height: rem(744);
+        position: absolute;
+        top: rem(-76);
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: rem(900) rem(744);
+        background-image: url(../img/iphone-ui.png);
+    }
+}

@@ -15,3 +15,12 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: local('Proxima Nova Black'), local('ProximaNova-Black'),
+        url('../fonts/ProximaNova/ProximaNova-Black.woff2') format('woff2'),
+        url('../fonts/ProximaNova/ProximaNova-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}

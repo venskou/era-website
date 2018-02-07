@@ -1,0 +1,52 @@
+.partition {
+    margin-bottom: rem(100);
+
+    &__wrap {
+        padding-left: rem(63);
+        padding-right: rem(63);
+
+        &--filled {
+            border-radius: 20px;
+            padding-top: rem(55);
+            padding-bottom: rem(63);
+        }
+
+        &--gray {
+            background-color: $gray;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(35);
+        position: relative;
+
+        &--marked {
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                height: rem(32);
+                top: rem(3);
+                left: rem(-63);
+                width: 9px;
+                background-color: $white;
+                border-radius: 4px;
+                background-image: linear-gradient(114deg, #00e5cb 0%, #0005fd 100%);
+            }
+        }
+
+        h2 {
+            font-size: rem(32);
+            line-height: rem(44);
+            font-weight: 700;
+            color: $black-text;
+        }
+    }
+
+    &__subtitle {
+        color: $black-text;
+        font-size: rem(18);
+        line-height: rem(24);
+        font-weight: 700;
+    }
+}

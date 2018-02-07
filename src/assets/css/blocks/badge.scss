@@ -13,4 +13,17 @@
     font-weight: 700;
     background-color: rgba($white, 0.2);
     border-radius: 3px;
+
+    &--big {
+        padding-left: rem(13);
+        padding-right: rem(13);
+        padding-top: rem(7);
+        padding-bottom: rem(7);
+        vertical-align: middle;
+        border-radius: 6px;
+        color: $white;
+        font-size: rem(16);
+        line-height: 1;
+        background-color: $green-dark;
+    }
 }

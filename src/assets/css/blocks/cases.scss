@@ -1,0 +1,59 @@
+.cases {
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(67);
+    }
+
+    &__items {
+        margin-bottom: rem(52);
+        .col-lg-6 {
+            &:nth-child(1) {
+                padding-right: rem(55);
+            }
+
+            &:nth-child(2) {
+                padding-right: rem(55);
+                padding-left: rem(55);
+            }
+        }
+    }
+
+    &__itemTitle {
+        margin-bottom: rem(18);
+    }
+
+    &__itemPromo {
+        margin-bottom: rem(10);
+    }
+
+    &__itemLink {
+        color: $blue;
+        font-size: rem(16);
+        line-height: rem(24);
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            height: 1px;
+            background-color: $blue;
+        }
+
+        &:hover {
+            &::after {
+                background-color: #090f25;
+            }
+        }
+    }
+
+    &__disclaimer {
+        text-align: center;
+        padding-left: rem(200);
+        padding-right: rem(200);
+    }
+}

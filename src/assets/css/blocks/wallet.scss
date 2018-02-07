@@ -1,0 +1,38 @@
+.wallet {
+    margin-bottom: rem(200);
+
+    &__descrText {
+        margin-bottom: rem(44);
+    }
+
+    &__item {
+        margin-bottom: rem(38);
+    }
+
+    &__itemTitle {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: rem(20);
+    }
+
+    &__disclaimer {
+        margin-top: rem(10);
+    }
+
+    &__webuiWrap {
+        height: 100%;
+        position: relative;
+    }
+
+    &__webuiImg {
+        position: absolute;
+        top: rem(-40);
+        left: 0;
+        width: rem(1240);
+        height: rem(779);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: rem(1240) rem(779);
+        background-image: url(../img/web-ui.jpg);
+    }
+}

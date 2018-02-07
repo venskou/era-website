@@ -1,0 +1,71 @@
+.partnership {
+
+    &__item {
+        border: 1px solid #eaedef;
+        padding-left: rem(40);
+        padding-right: rem(40);
+        padding-top: rem(40);
+        padding-bottom: rem(40);
+        border-radius: 4px;
+        height: 100%;
+    }
+
+    &__itemLogo {
+        margin-bottom: rem(26);
+        .badge--big {
+            vertical-align: bottom;
+        }
+
+        &--tba {
+            font-size: rem(30);
+            font-weight: 700;
+            line-height: 1;
+        }
+    }
+
+    &__itemLogoImg {
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &--mediatec {
+            width: rem(120);
+            height: rem(40);
+            background-size: rem(120) rem(21);
+            background-image: url(../img/mediatec-logo-black.png);
+        }
+
+        &--coinsnex {
+            width: rem(111);
+            height: rem(40);
+            background-size: rem(111) rem(40);
+            background-image: url(../img/coinsnex-logo-black.png);
+        }
+    }
+
+    &__itemDescr {
+        font-size: rem(16);
+        line-height: rem(24);
+        margin-bottom: rem(6);
+    }
+
+    &__itemLink {
+        margin-bottom: rem(22);
+        a {
+            color: $blue;
+            font-size: rem(16);
+            line-height: rem(24);
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                height: 1px;
+                background-color: $blue;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+            }
+        }
+    }
+}

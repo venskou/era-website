@@ -76,6 +76,19 @@
 
     &__downloadBtn {
         margin-right: rem(20);
+        padding-right: rem(42);
+        position: relative;
+
+        &--padbtn {
+            padding-right: rem(19);
+        }
+    }
+
+    &__downloadBtnIcon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: rem(15);
     }
 
     &__downloadTitle {

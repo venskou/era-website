@@ -1,6 +1,10 @@
 $(document).ready(function () {
 
     //////////////////////////////////////////////////
+    // Run SVG Sprite
+    svg4everybody();
+
+    //////////////////////////////////////////////////
     // Global Navigation
     function globalNavDropdowns (e) {
         var t = this

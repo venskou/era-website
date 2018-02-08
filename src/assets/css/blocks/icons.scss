@@ -1,0 +1,55 @@
+.icon {
+    transition: fill 0.2s ease;
+
+    &--githubFill {
+        width: 32px;
+        height: 28px;
+        fill: $white;
+    }
+
+    &--windows {
+        fill: $white;
+        width: 16px;
+        height: 16px;
+    }
+
+    &--apple {
+        fill: $white;
+        width: 14px;
+        height: 18px;
+    }
+
+    &--linux {
+        fill: $white;
+        width: 16px;
+    }
+
+    &--externalLink {
+        fill: $white;
+        width: 16px;
+    }
+
+    &--reddit {
+        width: 24px;
+    }
+
+    &--twitter {
+        width: 22px;
+    }
+
+    &--facebook {
+        width: 12px;
+    }
+
+    &--telegram {
+        width: 24px;
+    }
+
+    &--discord {
+        width: 25px;
+    }
+
+    &--github {
+        width: 24px;
+    }
+}

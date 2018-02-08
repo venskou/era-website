@@ -24,6 +24,10 @@ var gulp = require('gulp'),
     print = require('gulp-print'),
     replace = require('gulp-replace-task'),
     reload = browserSync.reload,
+    rename = require('gulp-rename'),
+    svgmin = require('gulp-svgmin'),
+    svgstore = require('gulp-svgstore'),
+    cheerio = require('gulp-cheerio'),
     argv = require('yargs').argv;
 
 /////////////////////////////////////////////////////////////////////////////
@@ -33,12 +37,13 @@ var path = {
     src: {
         sites: 'src/sites/**/*.*',
         templates: 'src/templates/**/*.*',
-        img: 'src/assets/img/**/*.*',
+        img: 'src/assets/img/**/*',
         css: 'src/assets/css/main.scss',
         js: 'src/assets/js/**/*.*',
         fonts: 'src/assets/fonts/**/*.{ttf,woff,woff2,eot,svg}',
         vendors_by_bower: 'src/assets/vendors/by_bower/**/*.*',
-        vendors_by_hands: 'src/assets/vendors/by_hands/**/*.*'
+        vendors_by_hands: 'src/assets/vendors/by_hands/**/*.*',
+        svg_sprite: 'src/assets/img/svg-sprite/*.svg'
     },
     build: {
         sites: 'dist/sites/',
@@ -140,6 +145,37 @@ gulp.task('build:img', function () {
         .pipe(gulp.dest(path.build.img)); // copy to destination folder
 });
 
+
+/////////////////////////////////////////////////////////////////////////////
+// SVG SPRITES BUILD
+
+gulp.task('build:svg_sprite', function() {
+    return gulp.src(path.src.svg_sprite)
+    .pipe(svgmin(function(file) {
+        return {
+            plugins:[{
+                cleanupIDs: {
+                    minify: true
+                },
+            }]
+        }
+    }))
+    .pipe(svgstore({
+        inlineSvg: true
+    }))
+    .pipe(cheerio({
+        run: function($) {
+            $('svg').attr('style', 'display: none');
+        },
+        parserOptions: {
+            xmlMode: true
+        }
+    }))
+    .pipe(rename('sprite-svg.svg'))
+    .pipe(gulp.dest(path.build.img))
+    .pipe(reload({stream: true}));
+});
+
 /////////////////////////////////////////////////////////////////////////////
 // FONTS BUILD
 
@@ -158,6 +194,7 @@ gulp.task('build', [
     'build:css', // run build:css task
     'build:js', // run build:js task
     'build:img', // run build:img task
+    'build:svg_sprite', // run build:svg_sprite task
     'build:vendors' // run build:vendors task
 ]);
 

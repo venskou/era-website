@@ -8,53 +8,178 @@
         padding-bottom: rem(40);
         border-radius: 4px;
         height: 100%;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            bottom: -1px;
+            right: 100%;
+            transition: right 0.2s ease;
+            transform: translateZ(0);
+            will-change: right;
+        }
+
+        &:hover {
+            &::before {
+                right: -1px;
+                background-color: #507fff;
+            }
+
+            .partnership__itemLogoImg {
+                &::before {
+                    display: none;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            .badge {
+                background-color: $white;
+                color: #507fff;
+            }
+
+            .partnership__itemLogoText {
+                color: $white;
+            }
+
+            .partnership__itemDescr {
+                color: $white;
+            }
+
+            .partnership__itemLink {
+                a {
+                    color: $white;
+
+                    &::after {
+                        background-color: $white;
+                    }
+                }
+            }
+
+            .partnership__itemText {
+                p {
+                    color: $white;
+                }
+            }
+        }
     }
 
     &__itemLogo {
         margin-bottom: rem(26);
+        position: relative;
+        z-index: 10;
+
         .badge--big {
-            vertical-align: bottom;
+            transition: color 0.2s ease, background-color 0.2s ease;
+            vertical-align: middle;
         }
 
         &--tba {
+            vertical-align: middle;
+        }
+    }
+
+    &__itemLogoText {
+        position: relative;
+        z-index: 10;
+        transition: color 0.2s ease;
+
+        &--tba {
+            display: inline-block;
+            height: rem(40);
+            vertical-align: middle;
             font-size: rem(30);
             font-weight: 700;
-            line-height: 1;
+            line-height: rem(40);
         }
     }
 
     &__itemLogoImg {
+        position: relative;
+        z-index: 10;
         background-position: center center;
         background-repeat: no-repeat;
 
         &--mediatec {
             width: rem(120);
             height: rem(40);
-            background-size: rem(120) rem(21);
-            background-image: url(../img/mediatec-logo-black.png);
+            position: relative;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: rem(120);
+                height: rem(21);
+                top: 50%;
+                transform: translateY(-50%) translateZ(0);
+                will-change: opacity;
+                left: 0;
+                display: block;
+                background-size: rem(120) rem(21);
+                background-image: url(../img/mediatec-logo-black.png);
+                background-repeat: no-repeat;
+            }
+
+            &::after {
+                opacity: 0;
+                transition: opacity 0.2s ease;
+                background-image: url(../img/mediatec-logo-white.png);
+            }
         }
 
         &--coinsnex {
             width: rem(111);
             height: rem(40);
-            background-size: rem(111) rem(40);
-            background-image: url(../img/coinsnex-logo-black.png);
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: rem(96);
+                height: rem(34);
+                background-size: rem(96) rem(34);
+                background-image: url(../img/coinsnex-logo-black.png);
+                background-repeat: no-repeat;
+                transition: opacity 0.2s ease;
+            }
+
+            &::after {
+                opacity: 0;
+                background-image: url(../img/coinsnex-logo-white.png);
+            }
         }
     }
 
     &__itemDescr {
+        position: relative;
+        z-index: 10;
         font-size: rem(16);
         line-height: rem(24);
         margin-bottom: rem(6);
+        transition: color 0.2s ease;
     }
 
     &__itemLink {
+        position: relative;
+        z-index: 10;
         margin-bottom: rem(22);
         a {
             color: $blue;
             font-size: rem(16);
             line-height: rem(24);
             position: relative;
+            transition: color 0.2s ease;
 
             &::after {
                 content: '';
@@ -65,7 +190,17 @@
                 right: 0;
                 bottom: 0;
                 position: absolute;
+                transition: background-color 0.2s ease;
+
             }
+        }
+    }
+
+    &__itemText {
+        position: relative;
+        z-index: 10;
+        p {
+            transition: color 0.2s ease;
         }
     }
 }

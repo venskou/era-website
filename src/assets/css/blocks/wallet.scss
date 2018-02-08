@@ -15,6 +15,20 @@
         margin-bottom: rem(20);
     }
 
+    &__btn {
+        position: relative;
+        &--iconed {
+            padding-right: rem(40);
+        }
+    }
+
+    &__btnIcon {
+        position: absolute;
+        top: calc(50% - 1px);
+        right: rem(13);
+        transform: translateY(-50%);
+    }
+
     &__disclaimer {
         margin-top: rem(10);
     }

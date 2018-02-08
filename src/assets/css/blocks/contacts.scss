@@ -1,0 +1,51 @@
+.contacts {
+    margin-bottom: rem(40);
+
+    &__title {
+        text-align: center;
+        margin-bottom: rem(20);
+    }
+
+    &__subText {
+        text-align: center;
+        color: $black-text;
+        font-size: rem(18);
+        line-height: rem(24);
+        margin-bottom: rem(20);
+    }
+
+    &__items {
+        font-size: 0;
+        text-align: center;
+        padding-bottom: rem(90);
+        border-bottom: 1px solid #eaedef;
+    }
+
+    &__item {
+        font-size: rem(18);
+        line-height: 1;
+        font-weight: 700;
+        color: $text;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: rem(60);
+        padding-right: rem(22);
+        padding-top: rem(14);
+        padding-bottom:  rem(12);
+        border: 1px solid #eaedef;
+        border-radius: 5px;
+        margin-right: rem(25);
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__itemIcon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: rem(22);
+    }
+}

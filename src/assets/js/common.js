@@ -1,4 +1,26 @@
 $(document).ready(function () {
+    if($('html').hasClass('mobile')) {
+        $('.pageLoader').css({'display':'none'});
+        $('.pageHeader__introWrap').css({'opacity' : '1'});
+        $('.pageHeader__videoWrap').addClass('mobile');
+    } else {
+        $('body').append('<div class="pageLoader"><div class="pageLoader__wrap"><div class="pageLoader__spin loader"></div></div></div>');
+        $.when($('.pageHeader__videoWrap').append('<video muted autoplay class="pageHeader__video" id="video"><source src="../../assets/img/ERA.mp4" type="video/mp4"></video>'))
+        .done(function(){
+            var myVideo = document.getElementById("video");
+            myVideo.oncanplay = function() {
+                myVideo.pause();
+                $('.pageLoader').addClass('loaded');
+                setTimeout(function() {
+                    $('.pageLoader').addClass('hidden');
+                    myVideo.play();
+                }, 200);
+                myVideo.onended = function() {
+                    $('.pageHeader__introWrap').addClass('show');
+                };
+            };
+        });
+    }
 
     //////////////////////////////////////////////////
     // Run SVG Sprite
@@ -167,6 +189,24 @@ $(document).ready(function () {
         new globalNavDropdowns('.globalNav')
     })
 
+    //////////////////////////////////////////////////
+    // Mobile Menu
+
+    $('.mobileMenu__hamburger').on('click', function () {
+        $('.mobileMenu').addClass('mobileMenu--active')
+    })
+
+    $('.mobileMenu__cross').on('click', function () {
+        $('.mobileMenu').removeClass('mobileMenu--active')
+    })
+
+    $(document).mouseup(function (e) {
+        var mobileMenu = $('.globalNav__mobileMenu')
+        if (!mobileMenu.is(e.target) && mobileMenu.has(e.target).length === 0) {
+            mobileMenu.removeClass('globalNav__mobileMenu--active')
+        }
+    })
+
     $("#white-wave").wavify({
         height: 75,
         bones: 1,
@@ -181,19 +221,6 @@ $(document).ready(function () {
         amplitude: 40,
         speed: .25
     });
-
-    var myVideo = document.getElementById("video");
-    myVideo.oncanplay = function() {
-        myVideo.pause();
-        $('.pageLoader').addClass('loaded');
-        setTimeout(function() {
-            $('.pageLoader').addClass('hidden');
-            myVideo.play();
-        }, 200);
-    };
-    myVideo.onended = function() {
-        $('.pageHeader__introWrap').addClass('show');
-    };
 
     var waveGradientAnimation = new TimelineMax({repeat:-1,yoyo:true})
 

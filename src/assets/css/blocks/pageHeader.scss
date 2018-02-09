@@ -4,9 +4,16 @@
     overflow: hidden;
     margin-bottom: rem(60);
 
+    @media(max-width: $md-max-width) {
+        height: 733px;
+    }
+
+    @media(max-width: $xs-max-width) {
+        height: 633px;
+    }
+
     &__introWrap {
         opacity: 0;
-        transition: opacity 0.6s ease;
         padding-top: rem(380);
         padding-bottom: 78px;
         height: 100%;
@@ -16,7 +23,20 @@
         background-image: linear-gradient(140deg, rgba(#00e5cb, 0.23) 0%, rgba(#0005fd, 0.23) 100%);
 
         &.show {
+            transition: opacity 0.6s ease;
             opacity: 1;
+        }
+
+        @media(max-width: $md-max-width) {
+            padding-top: rem(250);
+        }
+
+        @media(max-width: $sm-max-width) {
+            padding-top: rem(300);
+        }
+
+        @media(max-width: $xs-max-width) {
+            padding-top: rem(240);
         }
     }
 
@@ -27,26 +47,80 @@
         color: $white;
         justify-content: center;
         padding-left: rem(50);
+
+        @media(max-width: $xl-max-width) {
+            padding-left: rem(0);
+        }
+
+        @media(max-width: $md-max-width) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__mainText {
         text-align: right;
-        margin-right: 95px;
+        margin-right: rem(95);
+
+        @media(max-width: $xl-max-width) {
+            margin-right: rem(45);
+        }
+
+        @media(max-width: $md-max-width) {
+            text-align: center;
+            width: 65%;
+            margin-bottom: rem(20);
+            margin-right: 0;
+
+            br {
+                display: none;
+            }
+        }
+
+        @media(max-width: $sm-max-width) {
+            width: 100%;
+        }
+
         p {
             color: $white;
             font-size: rem(50);
             line-height: rem(51);
             font-weight: 700;
+
+            @media(max-width: $sm-max-width) {
+                font-size: rem(40);
+                line-height: rem(41);
+            }
+
+            @media(max-width: $xs-max-width) {
+                font-size: rem(35);
+                line-height: rem(36);
+            }
         }
     }
 
     &__subText {
         align-self: center;
+
+        @media(max-width: $md-max-width) {
+            text-align: center;
+        }
+
         p {
             color: rgba($white, 0.75);
             font-size: rem(29);
             line-height: rem(46);
             font-weight: 400;
+
+            @media(max-width: $sm-max-width) {
+                font-size: rem(27);
+                line-height: rem(42);
+            }
+
+            @media(max-width: $xs-max-width) {
+                font-size: rem(25);
+                line-height: rem(40);
+            }
         }
     }
 
@@ -79,6 +153,13 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10;
+        background-repeat: no-repeat;
+
+        &.mobile {
+            background-image: url(../img/mobile-bg-video.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
     }
 
     &__video {

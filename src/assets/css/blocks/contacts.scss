@@ -19,6 +19,10 @@
         text-align: center;
         padding-bottom: rem(90);
         border-bottom: 1px solid #eaedef;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__item {
@@ -26,20 +30,16 @@
         line-height: 1;
         font-weight: 700;
         color: $text;
-        display: inline-block;
-        vertical-align: top;
         padding-left: rem(60);
         padding-right: rem(22);
         padding-top: rem(14);
         padding-bottom:  rem(12);
         border: 1px solid #eaedef;
         border-radius: 5px;
-        margin-right: rem(25);
+        margin-right: rem(13);
+        margin-left: rem(13);
+        margin-bottom: rem(10);
         position: relative;
-
-        &:last-child {
-            margin-right: 0;
-        }
     }
 
     &__itemIcon {

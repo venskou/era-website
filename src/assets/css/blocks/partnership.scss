@@ -1,5 +1,14 @@
 .partnership {
 
+    .col-lg-4 {
+        @media(max-width: $md-max-width) {
+            margin-bottom: rem(20);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
     &__item {
         border: 1px solid #eaedef;
         padding-left: rem(40);
@@ -11,6 +20,13 @@
         width: 100%;
         position: relative;
         overflow: hidden;
+
+        @media(max-width: $xl-max-width) {
+            padding-left: rem(30);
+            padding-right: rem(30);
+            padding-top: rem(30);
+            padding-bottom: rem(30);
+        }
 
         &::before {
             content: '';

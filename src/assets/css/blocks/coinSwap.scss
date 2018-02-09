@@ -28,5 +28,22 @@
         background-position: center center;
         background-size: rem(900) rem(744);
         background-image: url(../img/iphone-ui.png);
+
+        @media(max-width: $xxl-max-width) {
+            left: rem(-100);
+        }
+
+        @media(max-width: $md-max-width) {
+            position: static;
+            width: 100%;
+            height: rem(408);
+            background-size: auto 100%;
+            margin: 0 auto;
+        }
+
+        @media(max-width: 490px) {
+            background-size: contain;
+            height: rem(220);
+        }
     }
 }

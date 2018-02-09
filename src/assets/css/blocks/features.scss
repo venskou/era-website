@@ -2,6 +2,11 @@
     padding-left: rem(63);
     padding-right: rem(63);
 
+    @media(max-width: $xxl-max-width) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: rem(50);
@@ -20,6 +25,16 @@
         padding-right: rem(220);
         margin-bottom: rem(75);
 
+        @media(max-width: $xxl-max-width) {
+            padding-left: rem(80);
+            padding-right: rem(80);
+        }
+
+        @media(max-width: $md-max-width) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
         p {
             color: $black-text;
             font-size: rem(18);
@@ -29,6 +44,10 @@
 
     &__item {
         text-align: center;
+
+        @media(max-width: $sm-max-width) {
+            margin-bottom: rem(25);
+        }
     }
 
     &__itemGraph {

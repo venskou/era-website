@@ -120,6 +120,12 @@
         width: 100px;
         font-size: rem(18);
         line-height: 1;
+
+        @media(max-width: $xs-max-width) {
+            top: -20px;
+            left: 0;
+            font-size: rem(15);
+        }
     }
 
     &__graphDescrItem {
@@ -131,6 +137,10 @@
         white-space: nowrap;
         margin-right: rem(32);
         margin-bottom: rem(20);
+
+        @media(max-width: $xs-max-width) {
+            white-space: initial;
+        }
     }
 
     &__graphDescrDot {

@@ -104,6 +104,11 @@
             padding-right: 0;
         }
 
+        @media(max-width: $xl-max-width) {
+            padding-left: rem(10);
+            padding-bottom: rem(10);
+        }
+
         &--hasDropdown {
             .menu__link {
                 cursor: pointer;
@@ -441,7 +446,7 @@
         margin-bottom: rem(10);
     }
 
-    &__head-title {
+    &__headTitle {
         text-transform: uppercase;
         font-size: rem(18);
         font-weight: 700;
@@ -522,8 +527,9 @@
         padding-bottom: rem(25);
     }
 
-    &__bottom-link {
-        display: block;
+    &__bottomLink {
+        vertical-align: top;
+        display: inline-block;
         font-weight: 700;
         color: $black;
         text-transform: uppercase;

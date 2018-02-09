@@ -1,6 +1,10 @@
 .wallet {
     margin-bottom: rem(200);
 
+    @media(max-width: $md-max-width) {
+        margin-bottom: rem(60);
+    }
+
     &__descrText {
         margin-bottom: rem(44);
     }
@@ -36,6 +40,10 @@
     &__webuiWrap {
         height: 100%;
         position: relative;
+
+        @media(max-width: $md-max-width) {
+            display: none;
+        }
     }
 
     &__webuiImg {

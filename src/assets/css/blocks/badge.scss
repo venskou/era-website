@@ -26,4 +26,10 @@
         line-height: 1;
         background-color: $green-dark;
     }
+
+    &--dark {
+        vertical-align: middle;
+        color: $white;
+        background-color: rgba($black, 0.2);
+    }
 }

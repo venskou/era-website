@@ -21,10 +21,6 @@
 
     &__descrItem {
         margin-bottom: rem(30);
-
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 
     &__descrTitle {
@@ -48,6 +44,10 @@
 
     &__downloads {
         padding-left: rem(40);
+
+        @media(max-width: $md-max-width) {
+            padding-left: 0;
+        }
     }
 
     &__downloadText {
@@ -60,8 +60,24 @@
         margin-bottom: rem(10);
     }
 
+    &__downloadItems {
+        @media(max-width: $sm-max-width) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media(max-width: $xs-max-width) {
+            flex-direction: column;
+        }
+    }
+
     &__downloadItemDescr {
         margin-bottom: rem(30);
+
+        @media(max-width: $sm-max-width) {
+            flex-basis: 50%;
+        }
     }
 
     &__downloadTitle {
@@ -72,12 +88,17 @@
 
     &__download {
         vertical-align: middle;
+        white-space: nowrap;
     }
 
     &__downloadBtn {
         margin-right: rem(20);
         padding-right: rem(42);
         position: relative;
+
+        @media(max-width: $md-max-width) {
+            margin-right: rem(10);
+        }
 
         &--padbtn {
             padding-right: rem(19);
@@ -102,6 +123,12 @@
         bottom: -1px;
         font-size: rem(16);
         line-height: 1;
+        white-space: nowrap;
+
+        @media(max-width: $sm-max-width) {
+            margin-top: rem(10);
+            display: block;
+        }
     }
 
     &__downloadBtn {

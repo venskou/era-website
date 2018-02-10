@@ -1,3 +1,4 @@
+dist/
 logs/*
 !.gitkeep
 node_modules/
@@ -7,7 +8,5 @@ src/assets/vendors/by_bower/
 src/vendors/by_bower
 /src/vendors/by_bower
 vcs.xml
-/dist
-dist/
 .git/
 .git

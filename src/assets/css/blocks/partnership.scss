@@ -33,17 +33,18 @@
             position: absolute;
             left: -1px;
             top: -1px;
-            bottom: -1px;
-            right: 100%;
-            transition: right 0.2s ease;
-            transform: translateZ(0);
-            will-change: right;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            transition: transform 0.2s ease;
+            transform: translateX(-100%) translateZ(0);
+            will-change: transform;
+            background-color: #507fff;
+
         }
 
         &:hover {
             &::before {
-                right: -1px;
-                background-color: #507fff;
+                transform: translateX(0) translateZ(0);
             }
 
             .partnership__itemLogoImg {

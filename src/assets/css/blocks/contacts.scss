@@ -40,6 +40,17 @@
         margin-left: rem(13);
         margin-bottom: rem(10);
         position: relative;
+        transition: color 0.2s ease, border-color 0.2s ease;
+        overflow: hidden;
+
+        &:hover {
+            color: $soft-blue;
+            border-color: $soft-blue;
+
+            .contacts__itemIcon {
+                fill: $soft-blue;
+            }
+        }
     }
 
     &__itemIcon {
@@ -47,5 +58,6 @@
         top: 50%;
         transform: translateY(-50%);
         left: rem(22);
+        transition: fill 0.2s ease;
     }
 }

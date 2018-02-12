@@ -56,6 +56,15 @@
     }
 
     &__navItemWrap {
+
+        &--correctedItem {
+            display: none;
+
+            @media(max-width: $md-max-width) {
+                display: block;
+            }
+        }
+
         @media(max-width: $md-max-width) {
             flex-basis: calc(100% / 4);
             margin-bottom: rem(15);

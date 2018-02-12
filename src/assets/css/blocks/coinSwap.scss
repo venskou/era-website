@@ -1,5 +1,17 @@
 .coinSwap {
 
+    @media(max-width: $md-max-width) {
+        margin-bottom: rem(90);
+    }
+
+    @media(max-width: $sm-max-width) {
+        margin-bottom: rem(70);
+    }
+
+    .z-10 {
+        z-index: 10;
+    }
+
     &__text {
         margin-bottom: rem(44);
     }
@@ -14,36 +26,63 @@
     }
 
     &__phoneUi {
-        height: 100%;
         position: relative;
+
+        @media(max-width: $md-max-width) {
+            height: rem(450);
+        }
+
+        @media(max-width: $sm-max-width) {
+            height: rem(390);
+        }
+
+        @media(max-width: $xs-max-width) {
+            height: auto;
+            margin-top: rem(-70);
+        }
+
     }
 
     &__phoneImg {
-        width: rem(900);
+        width: rem(880);
         height: rem(744);
         position: absolute;
         top: rem(-76);
         left: 0;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: rem(900) rem(744);
-        background-image: url(../img/iphone-ui.png);
 
         @media(max-width: $xxl-max-width) {
             left: rem(-100);
         }
 
         @media(max-width: $md-max-width) {
-            position: static;
-            width: 100%;
-            height: rem(408);
-            background-size: auto 100%;
-            margin: 0 auto;
+            position: relative;
+            top: rem(-125);
+            left: calc(50% - 20px);
+            transform: translateX(-50%);
+            // width: 100%;
+            height: auto;
+            // height: rem(408);
+            // background-size: auto 100%;
+            // margin: 0 auto;
+        }
+
+        @media(max-width: $sm-max-width) {
+            width: rem(650);
+            height: rem(550);
+            top: rem(-85);
+            // left: rem(-40);
+        }
+
+        @media(max-width: $xs-max-width) {
+            width: calc(100% + 150px);
+            height: auto;
+            position: relative;
+            top: 0;
         }
 
         @media(max-width: 490px) {
-            background-size: contain;
-            height: rem(220);
+            // background-size: contain;
+            // height: rem(220); #3e86ff;
         }
     }
 }

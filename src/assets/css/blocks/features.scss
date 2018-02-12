@@ -75,15 +75,29 @@
         }
     }
 
+    &__itemNumber {
+        color: $green-dark;
+        font-weight: 900;
+        font-size: rem(90);
+        position: absolute;
+        top: 0;
+        line-height: 1;
+        left: rem(-10);
+    }
+
     &__itemBadge {
         position: absolute;
-        text-align: center;
-        left: 0;
-        right: 0;
-        bottom: rem(145);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &__itemBadgeText {
+        position: relative;
+        bottom: rem(-170);
+        left: 50%;
+        transform: translateX(-50%);
         display: inline-block;
         color: $white;
         font-size: rem(21);
@@ -92,6 +106,7 @@
         border-radius: 4px;
         padding-left: rem(14);
         padding-right: rem(14);
+        white-space: nowrap;
     }
 
     &__itemDescr {

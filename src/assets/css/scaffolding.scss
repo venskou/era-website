@@ -83,7 +83,6 @@ p {
 }
 
 .table {
-
   td {
     font-size: rem(16);
     line-height: rem(31);
@@ -102,4 +101,8 @@ p {
 
 .text-muted {
     color: rgba($black-text, 0.3);
+}
+
+.overflowed {
+    overflow: hidden;
 }

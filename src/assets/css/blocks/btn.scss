@@ -65,6 +65,18 @@
         }
     }
 
+    &--blue {
+        background-color: $soft-blue;
+
+        &:hover {
+            background-color: lighten($soft-blue, 4);
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
     &__icon {
         position: relative;
         z-index: 10;

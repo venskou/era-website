@@ -4,13 +4,16 @@ $(document).ready(function () {
         $('.pageHeader__introWrap').css({'opacity' : '1'});
         $('.pageHeader__videoWrap').addClass('mobile');
     } else {
+
         $('body').append('<div class="pageLoader"><div class="pageLoader__wrap"><div class="pageLoader__spin loader"></div></div></div>');
-        $.when($('.pageHeader__videoWrap').append('<video muted autoplay class="pageHeader__video" id="video"><source src="../../assets/img/ERA.mp4" type="video/mp4"></video>'))
+        $('html').addClass('overflowed');
+        $.when($('.pageHeader__sidesVideoGradient').append('<video muted autoplay class="pageHeader__video" id="video"><source src="../../assets/img/ERA.mp4" type="video/mp4"></video>'))
         .done(function(){
             var myVideo = document.getElementById("video");
             myVideo.oncanplay = function() {
                 myVideo.pause();
                 $('.pageLoader').addClass('loaded');
+                $('html').removeClass('overflowed');
                 setTimeout(function() {
                     $('.pageLoader').addClass('hidden');
                     myVideo.play();

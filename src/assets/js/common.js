@@ -3,20 +3,31 @@ $(document).ready(function () {
         $('.pageLoader').css({'display':'none'});
         $('.pageHeader__introWrap').css({'opacity' : '1'});
         $('.pageHeader__videoWrap').addClass('mobile');
+        $('.globalNav').addClass('mobile');
+        $('.pageHeader__introWrap').addClass('mobile');
+        $('.pageHeader__mainText').addClass('mobile');
+        $('.pageHeader__subText').addClass('mobile');
     } else {
-
-        $('body').append('<div class="pageLoader"><div class="pageLoader__wrap"><div class="pageLoader__spin loader"></div></div></div>');
-        $('html').addClass('overflowed');
+        $('.pageHeader').append('<div class="pageLoader"><div class="pageLoader__wrap"><div class="pageLoader__spin loader"></div></div></div>');
         $.when($('.pageHeader__sidesVideoGradient').append('<video muted autoplay class="pageHeader__video" id="video"><source src="../../assets/img/ERA.mp4" type="video/mp4"></video>'))
         .done(function(){
             var myVideo = document.getElementById("video");
             myVideo.oncanplay = function() {
                 myVideo.pause();
                 $('.pageLoader').addClass('loaded');
-                $('html').removeClass('overflowed');
                 setTimeout(function() {
                     $('.pageLoader').addClass('hidden');
                     myVideo.play();
+                    setTimeout(function() {
+                        $('.globalNav').addClass('show');
+                    }, 1100)
+                    setTimeout(function() {
+                        $('.pageHeader__mainText').addClass('show');
+                        $('.pageHeader__introWrap').addClass('show');
+                    }, 1800)
+                    setTimeout(function() {
+                        $('.pageHeader__subText').addClass('show');
+                    }, 2800)
                 }, 200);
                 myVideo.onended = function() {
                     $('.pageHeader__introWrap').addClass('show');

@@ -13,18 +13,36 @@
     }
 
     &__introWrap {
-        opacity: 0;
+        opacity: 1;
         padding-top: rem(380);
         padding-bottom: 78px;
         height: 100%;
         position: relative;
         z-index: 20;
-        background-color: rgba(#181822, 0.8);
-        background-image: linear-gradient(140deg, rgba(#00e5cb, 0.23) 0%, rgba(#0005fd, 0.23) 100%);
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(140deg, rgba(#00e5cb, 0.23) 0%, rgba(#0005fd, 0.23) 100%);
+            opacity: 0;
+        }
 
         &.show {
-            transition: opacity 0.6s ease;
-            opacity: 1;
+            &::before {
+                opacity: 1;
+                transition: opacity 1.9s linear;
+            }
+        }
+
+        &.mobile {
+            &::before {
+                opacity: 1;
+            }
         }
 
         @media(max-width: $md-max-width) {
@@ -47,6 +65,8 @@
         color: $white;
         justify-content: center;
         padding-left: rem(50);
+        position: relative;
+        z-index: 9999;
 
         @media(max-width: $xl-max-width) {
             padding-left: rem(0);
@@ -61,6 +81,20 @@
     &__mainText {
         text-align: right;
         margin-right: rem(95);
+        transition: opacity 1.2s ease-out, transform 1.3s ease-out;
+        opacity: 0;
+        transform: translateX(-200px);
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        &.mobile {
+            opacity: 1;
+            transition: none;
+            transform: translateX(0);
+        }
 
         @media(max-width: $xl-max-width) {
             margin-right: rem(45);
@@ -101,6 +135,20 @@
 
     &__subText {
         align-self: center;
+        transition: opacity 0.5s ease-out, transform 0.8s ease-out;
+        opacity: 0;
+        transform: translateX(200px);
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        &.mobile {
+            opacity: 1;
+            transition: none;
+            transform: translateX(0);
+        }
 
         @media(max-width: $md-max-width) {
             text-align: center;
@@ -129,7 +177,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        z-index: 30;
+        z-index: 90;
     }
 
     &__oceanWave {
@@ -149,7 +197,7 @@
         position: absolute;
         width: calc(100% + 800px);
         height: calc(100% + 800px);
-        top: 70%;
+        top: 65%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 10;
@@ -160,6 +208,10 @@
             background-image: url(../img/mobile-bg-video.jpg);
             background-position: center center;
             background-size: cover;
+        }
+
+        @media(max-width: $xl-max-width) {
+            top: 63%;
         }
     }
 

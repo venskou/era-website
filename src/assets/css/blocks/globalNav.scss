@@ -4,7 +4,17 @@
     left: 0;
     right: 0;
     z-index: 100;
+    transform: translateY(-130px);
     transition: none;
+
+    &.show {
+        transition: transform 1.5s ease-out;
+        transform: translateY(0);
+    }
+
+    &.mobile {
+        transform: translateY(0);
+    }
 
     &__root {
         margin: 0;

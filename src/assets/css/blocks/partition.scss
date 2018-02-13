@@ -10,14 +10,16 @@
         padding-right: rem(63);
 
         @media(max-width: $sm-max-width) {
-            padding-left: rem(30);
-            padding-right: rem(30);
+            padding-left: 0;
+            padding-right: 0;
+            // padding-left: rem(30);
+            // padding-right: rem(30);
         }
 
-        @media(max-width: $xs-max-width) {
-            padding-left: rem(20);
-            padding-right: rem(20);
-        }
+        // @media(max-width: $xs-max-width) {
+        //     padding-left: rem(20);
+        //     padding-right: rem(20);
+        // }
 
         &--filled {
             border-radius: 20px;
@@ -44,6 +46,10 @@
         margin-bottom: rem(35);
         position: relative;
 
+        @media(max-width: $sm-max-width) {
+            padding-left: rem(30);
+        }
+
         &--marked {
             &::before {
                 content: '';
@@ -58,11 +64,7 @@
                 background-image: linear-gradient(114deg, #00e5cb 0%, #0005fd 100%);
 
                 @media(max-width: $sm-max-width) {
-                    left: rem(-30);
-                }
-
-                @media(max-width: $xs-max-width) {
-                    left: rem(-20)
+                    left: 0;
                 }
             }
         }

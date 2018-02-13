@@ -48,10 +48,6 @@
         left: 0;
         width: rem(1240);
         height: rem(778);
-        // background-repeat: no-repeat;
-        // background-position: center center;
-        // background-size: rem(1240) rem(779);
-        // background-image: url(../img/web-ui.jpg);
 
         @media(max-width: $md-max-width) {
             position: relative;
@@ -60,6 +56,10 @@
             transform: translateX(-50%);
             width: 100%;
             height: auto;
+        }
+
+        @media(max-width: $sm-max-width) {
+            width: calc(100% + 30px);
         }
     }
 }

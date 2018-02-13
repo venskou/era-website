@@ -168,6 +168,10 @@
             @media(max-width: $xs-max-width) {
                 font-size: rem(25);
                 line-height: rem(40);
+
+                br {
+                    display: none;
+                }
             }
         }
     }

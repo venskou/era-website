@@ -67,16 +67,16 @@
             flex-wrap: wrap;
         }
 
-        @media(max-width: $xs-max-width) {
-            flex-direction: column;
-        }
+        // @media(max-width: $xs-max-width) {
+        //     flex-direction: column;
+        // }
     }
 
     &__downloadItemDescr {
         margin-bottom: rem(30);
 
         @media(max-width: $sm-max-width) {
-            flex-basis: 50%;
+            flex-basis: 48%;
         }
     }
 

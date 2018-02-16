@@ -5,6 +5,14 @@
         margin-bottom: rem(60);
     }
 
+    &--mb50 {
+        margin-bottom: rem(50);
+
+        @media(max-width: $md-max-width) {
+            margin-bottom: rem(10);
+        }
+    }
+
     &__wrap {
         padding-left: rem(63);
         padding-right: rem(63);

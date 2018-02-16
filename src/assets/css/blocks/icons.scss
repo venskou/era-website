@@ -7,21 +7,51 @@
         fill: $white;
     }
 
+    &--githubFillBlack {
+        fill: $black;
+    }
+
     &--windows {
         fill: $white;
         width: 16px;
         height: 16px;
+
+        &Lg {
+            width: 60px;
+            height: 71px;
+        }
     }
 
     &--apple {
         fill: $white;
         width: 14px;
         height: 18px;
+
+        &Lg {
+            width: 60px;
+            height: 71px;
+        }
     }
 
     &--linux {
         fill: $white;
         width: 16px;
+
+        &Lg {
+            width: 60px;
+            height: 71px;
+        }
+    }
+
+    &--googleplay {
+        fill: $white;
+        width: 16px;
+        height: 17px;
+
+        &Lg {
+            width: 60px;
+            height: 71px;
+        }
     }
 
     &--externalLink {
@@ -51,5 +81,9 @@
 
     &--github {
         width: 24px;
+    }
+
+    &--black {
+        fill: $black;
     }
 }

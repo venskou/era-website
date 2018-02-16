@@ -5,6 +5,14 @@
         margin-bottom: 0;
     }
 
+    &--inner {
+        margin-bottom: rem(100);
+
+        @media(max-width: $md-max-width) {
+            margin-bottom: rem(60);
+        }
+    }
+
     &__descrText {
         margin-bottom: rem(44);
     }

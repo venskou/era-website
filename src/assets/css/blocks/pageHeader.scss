@@ -12,6 +12,18 @@
         height: 633px;
     }
 
+    &--inner {
+        height: 200px;
+
+        @media(max-width: $md-max-width) {
+            height: 158px;
+        }
+
+        @media(max-width: $xs-max-width) {
+            height: 154px;
+        }
+    }
+
     &__introWrap {
         opacity: 1;
         padding-top: rem(380);

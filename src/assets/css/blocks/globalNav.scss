@@ -7,6 +7,10 @@
     transform: translateY(-130px);
     transition: none;
 
+    &--inner {
+        transform: none;
+    }
+
     &.show {
         transition: transform 1.5s ease-out;
         transform: translateY(0);
@@ -21,6 +25,15 @@
         padding: 0;
         list-style: none;
         position: relative;
+
+        &--bordered {
+            padding-bottom: rem(20);
+            border-bottom: 1px solid #eaedef;
+
+            @media(max-width: $md-max-width) {
+                padding-bottom: rem(51);
+            }
+        }
     }
 
     ////////////////////////////////////////////////////
@@ -40,6 +53,7 @@
         width: 113px;
         height: 30px;
         margin-bottom: rem(9);
+
         span {
             display: inline-block;
             vertical-align: top;
@@ -49,6 +63,12 @@
             background-size: 113px 30px;
             background-image: url(../../assets/img/logo.png);
         }
+
+        &--black {
+            span {
+                background-image: url(../../assets/img/logo-black.png);
+            }
+        }
     }
 
     &__logoPromo {
@@ -56,6 +76,10 @@
         font-weight: 400;
         font-size: rem(14);
         line-height: 1;
+
+        &--black {
+            color: $black;
+        }
     }
 
     &--noDropdownTransition {
@@ -163,10 +187,36 @@
             }
         }
 
+        &--black {
+            color: $black;
+
+            &:hover {
+                color: rgba($black, 0.65);
+            }
+
+            &:focus {
+                color: $black;
+            }
+
+            &:hover {
+                &:focus {
+                    color: $black;
+                }
+            }
+        }
+
         &--icon {
             &:hover {
                 .icon {
                     fill: rgba($white, 0.7);
+                }
+            }
+        }
+
+        &--iconBlack {
+            &:hover {
+                .icon {
+                    fill: rgba($black, 0.65);
                 }
             }
         }
@@ -425,6 +475,27 @@
                 &::after {
                     background-color: rgba($white, 0.6);
 
+                }
+            }
+        }
+        &--black {
+            span {
+                background-color: $black;
+                &::before,
+                &::after {
+                    background-color: $black;
+                }
+            }
+
+            &:hover {
+                span {
+                    background-color: rgba($black, 0.6);
+
+                    &::before,
+                    &::after {
+                        background-color: rgba($black, 0.6);
+
+                    }
                 }
             }
         }

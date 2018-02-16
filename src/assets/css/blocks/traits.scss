@@ -1,0 +1,12 @@
+.traits {
+    &__item {
+        @media(max-width: $md-max-width) {
+            margin-bottom: rem(35);
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        margin-bottom: rem(35);
+    }
+}

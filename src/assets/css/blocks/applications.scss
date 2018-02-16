@@ -1,0 +1,57 @@
+.applications {
+
+    &__text {
+        margin-bottom: rem(50);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-bottom: rem(50);
+    }
+
+    &__itemIcon {
+        align-self: center;
+        margin-right: rem(48);
+
+        @media(max-width: $md-max-width) {
+            margin-right: rem(28);
+        }
+    }
+
+    &__itemName {
+        display: block;
+        font-size: rem(18);
+        line-height: rem(24);
+        font-weight: 700;
+        margin-bottom: rem(14);
+    }
+
+    &__download {
+        white-space: nowrap;
+        @media(max-width: $md-max-width) {
+            display: flex;
+            flex-direction: column;
+            white-space: normal;
+            align-items: flex-start;
+        }
+    }
+
+    &__downloadBtn {
+        margin-right: rem(20);
+
+        @media(max-width: $md-max-width) {
+            margin-right: 0;
+            order: 1;
+            margin-top: rem(14);
+        }
+    }
+
+    &__downloadInfo {
+        display: inline-block;
+        font-size: rem(16);
+        line-height: rem(24);
+    }
+
+}

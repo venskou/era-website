@@ -67,6 +67,15 @@
         padding-bottom: rem(10);
         border-radius: 5px;
         text-transform: uppercase;
+        transition: border-color 0.25s linear;
+
+        &[disabled] {
+            background-color: darken($gray, 3);
+        }
+
+        &:focus {
+            border-color: $soft-blue;
+        }
     }
 
     &__btnWrapper {

@@ -32,4 +32,29 @@
         color: $white;
         background-color: rgba($black, 0.2);
     }
+
+    &--table {
+        font-size: rem(14);
+        vertical-align: middle;
+        font-weight: 700;
+        color: $white;
+        padding-left: rem(10);
+        padding-right: rem(10);
+        text-transform: none;
+        padding-top: rem(3);
+        padding-bottom: rem(3);
+    }
+
+    &--secondary {
+        color: $black;
+        background-color: $rich-gray;
+    }
+
+    &--primary {
+        background-color: $soft-blue;
+    }
+
+    &--success {
+        background-color: $salat;
+    }
 }

@@ -242,4 +242,11 @@ $(document).ready(function () {
 
     waveGradientAnimation.to("#grad stop:nth-child(1)", 1, {attr: {offset: 0}, stopColor:'#121F52'})
     .to("#grad stop:nth-child(2)",1,{attr:{offset:1},stopColor:'#13454A'}, 0)
+
+    $(".swap__btn").on("click", function() {
+        $(".swap").addClass('loaded');
+        setTimeout(function() {
+          $(".swap").addClass('animated');
+        }, 250);
+    });
 });

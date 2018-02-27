@@ -334,6 +334,94 @@
             </div>
         </div>
     </section>
+    <section class="swap">
+        <div class="container-fluid">
+            <div class="partition__wrap partition__wrap--gray partition__wrap--filled">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="swap__title partition__title partition__title--marked">
+                            <h2>BLAS to ERA Swap</h2>
+                        </div>
+                        <div class="swap__descrText">
+                            <p>
+                                Blake2s itself is a high speed, optimized cryptographic hashing algorithm used for Proof-of-Work and Proof-of-Stake hashes in BlakeStar for performance with low load. It uses Proof-of-Work, but unlike Bitcoin it is configured to transition to Proof-of-Stake, when small numbers of coins will be issued yearly for staking (10% yearly).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <form class="swap__form" action="#">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="swap__inputSection">
+                                <label for="era-adress" class="swap__label">Era Adress <span class="swap__labelDescr">(on this address you will receive swapped coins)</span></label>
+                                <input class="swap__input" type="text" id="era-adress">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="swap__inputSection swap__inputSection--hidden">
+                                <label for="blas-adress" class="swap__label">Swap BLAS Adress <span class="swap__labelDescr">(send to this your BLAS coins for swapv)</span></label>
+                                <input class="swap__input" type="text" id="blas-adress">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="swap__btnWrapper">
+                                <button class="swap__btn btn btn--blue" type="button">Get Swap Address</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="swap__tableWrapper">
+                            <div class="table-responsive">
+                                <table class="swap__table table">
+                                    <caption class="swap__tableCaption">Swap History for Address BkMpmKWy8h925tDDLYVjKQuzAMu6aawEvz</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Tx Date</th>
+                                            <th>Blas Deposites</th>
+                                            <th>ERA Sent</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>0000-00-00 00:00:00</td>
+                                            <td>100</td>
+                                            <td>0</td>
+                                            <td>
+                                                <span class="badge badge--table badge--secondary">Waiting Confirmations</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0000-00-00 00:00:00</td>
+                                            <td>1000</td>
+                                            <td>100</td>
+                                            <td>
+                                                <span class="badge badge--table badge--primary">Swapping</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>0000-00-00 00:00:00</td>
+                                            <td>566</td>
+                                            <td>56.6</td>
+                                            <td>
+                                                <span class="badge badge--table badge--success">Completed</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     //=../../templates/contacts.html
     //=../../templates/pageFooter.html
 </body>
